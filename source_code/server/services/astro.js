@@ -123,16 +123,16 @@ function scheduleCronJobs() {
   }, CRON_OPTS);
 
   // Auto-start car at 7:00 AM — await so unhandled rejections can't escape
-  cron.schedule('0 7 * * *', async () => {
-    console.log('[Cron] 07:00 triggered');
-    await maybeStartCar('07:00');
-  }, CRON_OPTS);
+//   cron.schedule('0 7 * * *', async () => {
+//     console.log('[Cron] 07:00 triggered');
+//     await maybeStartCar('07:00');
+//   }, CRON_OPTS);
 
-  // Retry at 7:11 AM
-  cron.schedule('11 7 * * *', async () => {
-    console.log('[Cron] 07:11 triggered');
-    await maybeStartCar('07:11');
-  }, CRON_OPTS);
+//   // Retry at 7:11 AM
+//   cron.schedule('11 7 * * *', async () => {
+//     console.log('[Cron] 07:11 triggered');
+//     await maybeStartCar('07:11');
+//   }, CRON_OPTS);
 }
 
 // ── Ping keepalive ───────────────────────────────────────────────────────────────
